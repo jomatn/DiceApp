@@ -1,10 +1,10 @@
-package com.example.diceapp.di
+package com.example.diceapp.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "score_table")
-data class GameResult(
+data class GameModel(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val playerScore: Int,

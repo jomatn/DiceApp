@@ -1,4 +1,4 @@
-package com.example.diceapp
+package com.example.diceapp.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.diceapp.ui.viewModel.GameViewModel
+import com.example.diceapp.R
 import com.example.diceapp.databinding.FragmentResultBinding
 
 class ResultFragment : Fragment() {
@@ -21,13 +23,16 @@ class ResultFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentResultBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(requireActivity()).get(GameViewModel::class.java)
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
         displayResult()
-
-        return binding.root
     }
 
     private fun displayResult() {

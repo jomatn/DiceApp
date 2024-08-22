@@ -16,23 +16,26 @@
 
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/coin_animation"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                app:lottie_rawRes="@raw/flip_coin"
+                android:layout_width="271dp"
+                android:layout_height="299dp"
+                app:lottie_autoPlay="false"
                 app:lottie_loop="false"
-                app:lottie_autoPlay="false" />
+                app:lottie_rawRes="@raw/flip_coin" />
 
             <Button
                 android:id="@+id/heads_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Heads" />
+                android:text="@string/heads"
+                android:backgroundTint="@color/black"/>
 
             <Button
                 android:id="@+id/tails_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tails" />
+                android:text="@string/tails"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"/>
         </LinearLayout>
     </FrameLayout>
 

@@ -1,5 +1,5 @@
 // GameViewModel.kt
-package com.example.diceapp
+package com.example.diceapp.ui.viewModel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

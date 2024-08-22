@@ -2,4 +2,13 @@
     <string name="app_name">DiceApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+    <string name="player_score_0">Player Score: 0</string>
+    <string name="bot_score_0">Bot Score: 0</string>
+    <string name="round_1">Round: 1</string>
+    <string name="heads">Heads</string>
+    <string name="tails">Tails</string>
+    <string name="go_back">GO BACK</string>
 </resources>

@@ -5,13 +5,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.diceapp.GameViewModel" />
+            type="com.example.diceapp.ui.viewModel.GameViewModel" />
     </data>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ResultFragment">
+        tools:context=".ui.fragment.ResultFragment">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:id="@+id/btn_back"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="GO BACK"
+                android:text="@string/go_back"
                 android:backgroundTint="@color/black"/>
         </LinearLayout>
     </FrameLayout>

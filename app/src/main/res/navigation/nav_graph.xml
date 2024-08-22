@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/coinTossFragment"
-        android:name="com.example.diceapp.CoinTossFragment"
+        android:name="com.example.diceapp.ui.fragment.CoinTossFragment"
         android:label="fragment_coin_toss"
         tools:layout="@layout/fragment_coin_toss" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/diceRollFragment"
-        android:name="com.example.diceapp.DiceRollFragment"
+        android:name="com.example.diceapp.ui.fragment.DiceRollFragment"
         android:label="fragment_dice_roll"
         tools:layout="@layout/fragment_dice_roll" >
         <action
@@ -25,10 +25,15 @@
     </fragment>
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.diceapp.ResultFragment"
+        android:name="com.example.diceapp.ui.fragment.ResultFragment"
         android:label="ResultFragment" >
         <action
             android:id="@+id/action_resultFragment_to_coinTossFragment"
             app:destination="@id/coinTossFragment" />
     </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.diceapp.ui.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
 </navigation>

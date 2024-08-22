@@ -1,11 +1,14 @@
-package com.example.diceapp.di
+package com.example.diceapp.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.diceapp.data.dao.GameDao
+import com.example.diceapp.data.model.GameModel
+
 // AppDatabase.kt
-@Database(entities = [GameResult::class], version = 1, exportSchema = false)
+@Database(entities = [GameModel::class], version = 1, exportSchema = false)
 abstract class GameDatabase : RoomDatabase() {
     abstract fun scoreDao(): GameDao
 

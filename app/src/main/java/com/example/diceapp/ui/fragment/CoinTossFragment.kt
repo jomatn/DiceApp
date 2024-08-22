@@ -1,4 +1,4 @@
-package com.example.diceapp
+package com.example.diceapp.ui.fragment
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -11,6 +11,8 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import com.example.diceapp.ui.viewModel.GameViewModel
+import com.example.diceapp.R
 import com.example.diceapp.databinding.FragmentCoinTossBinding
 
 class CoinTossFragment : Fragment() {
@@ -25,13 +27,17 @@ class CoinTossFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentCoinTossBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(requireActivity()).get(GameViewModel::class.java)
         navController = findNavController()
 
         binding.headsButton.setOnClickListener { flipCoin(true) }
         binding.tailsButton.setOnClickListener { flipCoin(false) }
 
-        return binding.root
     }
 
     private fun flipCoin(playerChoice: Boolean) {
