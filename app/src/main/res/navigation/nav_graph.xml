@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/coinTossFragment">
+
+    <fragment
+        android:id="@+id/coinTossFragment"
+        android:name="com.example.diceapp.CoinTossFragment"
+        android:label="fragment_coin_toss"
+        tools:layout="@layout/fragment_coin_toss" >
+        <action
+            android:id="@+id/action_coinTossFragment_to_diceRollFragment"
+            app:destination="@id/diceRollFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/diceRollFragment"
+        android:name="com.example.diceapp.DiceRollFragment"
+        android:label="fragment_dice_roll"
+        tools:layout="@layout/fragment_dice_roll" >
+        <action
+            android:id="@+id/action_diceRollFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.diceapp.ResultFragment"
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_coinTossFragment"
+            app:destination="@id/coinTossFragment" />
+    </fragment>
+</navigation>
