@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.diceapp.databinding.FragmentResultBinding
 
 class ResultFragment : Fragment() {
@@ -41,6 +42,9 @@ class ResultFragment : Fragment() {
 
         binding.resultText.text = resultText
         Toast.makeText(context, resultText, Toast.LENGTH_SHORT).show()
+        binding.btnBack.setOnClickListener {
+            findNavController().navigate(R.id.action_resultFragment_to_coinTossFragment)
+        }
     }
 
     override fun onDestroyView() {

@@ -25,6 +25,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp" />
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GO BACK"
+                android:backgroundTint="@color/black"/>
         </LinearLayout>
     </FrameLayout>
 </layout>
